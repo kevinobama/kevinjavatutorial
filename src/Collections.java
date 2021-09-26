@@ -37,5 +37,6 @@ public class Collections {
 //	        // Let us print the sorted list
 //	        System.out.println("List after the use of" +
 //	                           " Collection.sort() :\n" + al);
+		System.out.println("good");
 	}
 }
