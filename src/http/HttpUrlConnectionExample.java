@@ -7,7 +7,7 @@ public class HttpUrlConnectionExample {
 	  public static void main(String[] args) throws Exception {		  		 		  
 		  //httpURLConnectionOne();
 		  //httpURLConnectionTwo();
-		  httpURLConnectionRequest();
+		  //httpURLConnectionRequest();
 	  }
 	  
 	public static void httpURLConnectionOne() {
@@ -87,21 +87,20 @@ public class HttpUrlConnectionExample {
 		  System.out.println(result.toString());
 	}
 	
-	public static void httpURLConnectionRequest() throws Exception {		  		 
+	public static void httpURLConnectionRequest(String method) throws Exception {		  		 
 		  System.out.println("http Url connection");
 		  String requestPara ="{\"order_user_name\": \"kevin gates\", \"order_id\": \"1\"}";
 		  
 		  StringBuilder result = new StringBuilder();
 	      BufferedReader in = null;
 	      try {
-	          //String url = "https://sj.eihoo.com/login";
 	      	  String url = "http://localhost:8081/order";
 	    	  //String url ="http://localhost:8081/order/create";
 	      	  
 	          URL realUrl = new URL(url);
 	          HttpURLConnection connection = (HttpURLConnection)realUrl.openConnection();
 	          connection.setRequestProperty("Content-Type", "application/json; utf-8");
-	          connection.setRequestMethod("GET");
+	          connection.setRequestMethod(method);
 	          connection.setDoOutput(true);
 
 	          connection.connect();

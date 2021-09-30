@@ -10,7 +10,7 @@ import java.io.*;
 
 public class TickerController {
 	public static void main(String[] args) throws IOException, InterruptedException, ParseException {
-		String cmd = "curl -x socks5h://localhost:8888 https://api.bitfinex.com/v1/pubticker/ethusd";//ethusd
+		String cmd = "curl -x socks5h://localhost:8888 https://api.bitfinex.com/v1/pubticker/btcusd";//ethusd
 		Runtime run = Runtime.getRuntime();
 		Process pr = run.exec(cmd);
 		pr.waitFor();
