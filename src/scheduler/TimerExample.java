@@ -17,7 +17,7 @@ public class TimerExample extends TimerTask {
 	    System.out.println(Thread.currentThread().getName()+" "+name+" the task has executed successfully "+ new Date());
 	    if("Task1".equalsIgnoreCase(name)){
 	      try {
-	      Thread.sleep(10000);
+	    	  Thread.sleep(1000);
 	      } catch (InterruptedException e) {
 	        // TODO Auto-generated catch block
 	        e.printStackTrace();
